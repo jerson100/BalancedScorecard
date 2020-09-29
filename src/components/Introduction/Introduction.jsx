@@ -1,143 +1,69 @@
-import React, { useEffect, useState } from "react";
-import { Card, Carousel, Row, Col, Typography, Layout, Tabs } from "antd";
-
-import { AppleOutlined, AndroidOutlined } from "@ant-design/icons";
+import React from "react";
+import { Card, Carousel, Row, Col, Typography, Space, Divider } from "antd";
 
 import "./introduction.scss";
+import WrapperNav from "../WrapperNav";
+import Keyword from "./Keyword/Keyword";
 
-const { TabPane } = Tabs;
 const { Meta } = Card;
 const { Title } = Typography;
-const { Content } = Layout;
 
-const Introduction = () => {
-  const [isMovil, setIsMovil] = useState(true);
-
-  useEffect(() => {
-    const resize = () => {
-      console.log("resize");
-      if (window.matchMedia("(min-width: 1200px)").matches) {
-        setIsMovil(false);
-      } else {
-        setIsMovil(true);
-      }
-    };
-    window.addEventListener("resize", resize);
-    resize();
-    return () => {
-      window.removeEventListener(resize);
-    };
-  }, []);
-
+const Introduction = ({ isMovil }) => {
   return (
     <div className="introduction">
-      <div className="introduction__content">
-        <Layout style={{ height: "100%" }}>
-          <Content>
-            {/* <h1 style={{ display: "none" }}>Introducción</h1> */}
-            <Title className="introduction__title">INTRODUCCIÓN</Title>
-            <IntroductionTabs isMovil={isMovil} />
-          </Content>
-        </Layout>
-      </div>
+      <IntroductionTabs isMovil={isMovil} />
     </div>
   );
 };
 
 const IntroductionTabs = ({ isMovil }) => {
-  console.log(isMovil);
   return (
-    <Row justify="center">
-      <Col lg={24}>
-        <Tabs defaultActiveKey="1" tabPosition={isMovil ? "top" : "left"}>
-          <TabPane
-            tab={
-              <span>
-                <AppleOutlined />
-                Introducción
-              </span>
-            }
-            key="1"
-          >
-            <IntroductionAuthor />
-          </TabPane>
-          <TabPane
-            tab={
-              <span>
-                <AndroidOutlined />
-                Importancia de las mipymes
-              </span>
-            }
-            key="2"
-          >
-            Tab 2
-          </TabPane>
-          <TabPane
-            tab={
-              <span>
-                <AndroidOutlined />
-                ¿Por qué necesitamos el balance scorecard?
-              </span>
-            }
-            key="3"
-          >
-            Tab 3
-          </TabPane>
-        </Tabs>
-      </Col>
-    </Row>
+    <WrapperNav
+      isMovil={isMovil}
+      tabs={[
+        { title: "Introducción", Component: IntroductionAuthor },
+        {
+          title: "¿POR QUÉ NECESITAMOS EL BALANCE SCORECARD?",
+          Component: IntroductionRazon,
+        },
+      ]}
+    />
   );
 };
 
-const IntroductionAuthor = ({ name, description, image }) => {
+const IntroductionAuthor = () => {
   return (
-    <section>
-      <Row gutter={[20, 20]} justify={"center"}>
-        <Col span={24} lg={8}>
-          <Title>Introducciòn</Title>
-          <p>
-            Para que las micro, pequeñas y medianas empresas nacionales puedan
-            afrontar los radicales cambios que le impone el nuevo entorno ope
-            rativo de la era de la información, basado en las funciones
-            cruzadas, los vínculos con proveedores y clientes, la segmentación
-            de clientes, la escala global y los empleados de nivel, se hace
-            necesario, entre otros factores, una eficiente administración de
-            estos, a través de una metodología de gestión dinámica y proactiva
-            que permita alinear la visión y las estrategias de la compañía con
-            los resultados operativos.{" "}
-          </p>
-          <p>
-            El reto de la competitividad es apremiante, y como es obvio estas
-            empresas requieren contar con mecanismos que les permitan
-            desarrollar estrategias y establecer indicadores de desempeño con el
-            fin de obtener productividad y eficiencia en sus procesos, mejorar
-            sus vínculos con los mercados, acceder a la innovación y la
-            tecnología, modernizar la gestión de sus recursos humanos y,
-            consecuentemente, lograr la rentabilidad deseada.
-          </p>
-          <p>
-            El Balanced Scorecard, difundido desde 1992 por los profesores
-            Robert Kaplan y David Norton, de la Universidad de Harvard, es una
-            metodología adecuada para enfrentar exitosamente el nuevo entorno
-            operativo de la actual era de la información y contribuir al
-            desarrollo de las micro, pequeñas y medianas empresas del país.
-          </p>
-          <p>
-            Actualmente existen muy pocas experiencias acerca de la implantación
-            de esta metodología en micro, pequeñas y medianas empresas en el
-            ámbito nacional. En diversos sectores industriales se ha implantado
-            esta herramienta, pero solo como instrumento de medición de
-            desempeño para la toma de decisiones; este estudio pretende ir más
-            allá y utilizarla como una metodología de gestión estratégica, que
-            vincule el planeamiento estratégico con el control operativo. Así,
-            servirá para que empresas de diversos rubros creen un modelo
-            similar, manteniendo los lineamientos generales pero aplicando
-            cambios específicos que se adapten a sus respectivos rubros.
-          </p>
+    <section className="introduction__section je-scroll">
+      <Row
+        gutter={[20, 20]}
+        justify={"center"}
+        className="introduction__section-row"
+      >
+        <Col span={24} lg={24}>
+          <Space direction="vertical" size="middle">
+            <Title style={{ textAlign: "center", margin: "1rem 0 0 0" }}>
+              Introducción
+            </Title>
+            <Divider />
+            <p>
+              En este presente documento se presenta el Balanced Scorecard, con
+              el fin de tener una idea general de como una organización debería
+              verlo como un instrumento que les permita trasladar los objetivos
+              estratégicos de sus empresas, a un conjunto coherente de medidas
+              definidas según algunos parámetros para la medición de la gestión.
+              Las empresas del siglo XXI tienen a disposición la herramienta
+              Balanced Scorecard que les permitirá medir la manera en que sus
+              unidades de negocios están creando valor agregado a sus clientes,
+              al igual que la forma en que deben potencializarse tanto las
+              capacidades internas, como las inversiones en personal, en los
+              sistemas y en los procedimientos que son base necesaria para la
+              mejora de la actuación a futuro de la organización.
+            </p>
+            {/* <Divider /> */}
+          </Space>
         </Col>
-        <Col span={24} lg={6}>
+        <Col span={24} lg={8} style={{ padding: "0 25px" }}>
           <Card
-            //   style={{ width: 300 }}
             cover={
               <Slide
                 images={[
@@ -155,9 +81,8 @@ const IntroductionAuthor = ({ name, description, image }) => {
             />
           </Card>
         </Col>
-        <Col span={24} lg={6}>
+        <Col span={24} lg={8} style={{ padding: "0 25px" }}>
           <Card
-            //   style={{ width: 300 }}
             cover={
               <Slide
                 images={[
@@ -174,6 +99,57 @@ const IntroductionAuthor = ({ name, description, image }) => {
               description="Kaplan comenzó su carrera académica en la Escuela de Negocios Tepper en la Universidad Carnegie-Mellon en 1968. Kaplan obtuvo una Licenciatura en Ingeniería Eléctrica y una Maestría en Ingeniería Eléctrica en el Instituto de Tecnología de Massachusetts ."
             />
           </Card>
+        </Col>
+        <Col span={24} lg={8} style={{ padding: "0 25px" }}>
+          <Card
+            cover={
+              <Slide
+                images={[
+                  { alt: "David Norton", url: "img/authors/grembergen-1.jpg" },
+                  { alt: "David Norton", url: "img/authors/grembergen-2.jpg" },
+                  { alt: "David Norton", url: "img/authors/grembergen-3.jpg" },
+                ]}
+              />
+            }
+          >
+            <Meta
+              title="Van Grembergen"
+              description="Nació en el año 1947 es un belga teórico organizacional y Profesor de Sistemas de Información en la Universidad de Amberes , y Director Académico de la alineación de TI y de Gobierno del Instituto de Investigación. Su reciente libro sobre Gobierno de TI: gestión de la empresa de tecnología de la información: El logro de alineación estratégica y el valor, Springer, 2009."
+            />
+          </Card>
+        </Col>
+      </Row>
+    </section>
+  );
+};
+
+const IntroductionRazon = () => {
+  return (
+    <section className="introduction__section je-scroll">
+      <Row gutter={[20, 20]} justify={"center"}>
+        <Col span={24} lg={18}>
+          <Space direction="vertical" size="middle">
+            <Title style={{ textAlign: "center", margin: "1rem 0" }}>
+              ¿Por qué necesitamos el balance scorecard?
+            </Title>
+            <Divider />
+            <p style={{ textAlign: "center" }}>
+              La creciente globalización de los mercados, del mismo modo que
+              crea oportunidades para incursionar en nuevos mercados extranjeros
+              también trae consigo la amenaza del ingreso de nuevos competidores
+              nacionales e internacionales en el mercado local, lo cual obliga a
+              las em presas a ser cada vez más competitivas, y a adecuarse
+              rápidamente al cambio en busca de eficiencia, eficacia y calidad
+              total, con el fin de mantenerse y desarrollarse
+            </p>
+            <ul className="introduction__keyword">
+              <Row justify="center">
+                <Keyword text="Metodología" colorBg="#FF2419" />
+                <Keyword text="visión de la organización" colorBg="#007BDF" />
+                <Keyword text="Gestión" colorBg="#282D31" />
+              </Row>
+            </ul>
+          </Space>
         </Col>
       </Row>
     </section>

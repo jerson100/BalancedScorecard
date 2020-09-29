@@ -1,0 +1,18 @@
+.marcoTeorico {
+  //   border: solid 1px red;
+  min-height: 100%;
+  height: inherit;
+  &__subtitle {
+    text-align: center;
+    // font-weight: bold;
+  }
+
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  &__img {
+    width: 100%;
+    object-fit: contain;
+    // background-color: red;
+  }
+}

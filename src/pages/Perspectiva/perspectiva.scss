@@ -1,0 +1,45 @@
+.perspectiva {
+  &__definition-portada {
+    height: 200px;
+    // background-color: red;
+    width: 100%;
+    background-image: url("/img/ports/perspectiva.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: blur(10px);
+  }
+  .ant-row {
+    position: relative !important;
+  }
+  .ant-col.ant-col-24.ant-col-lg-24::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "¿Qué es la perspectiva?";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 40px;
+    text-shadow: 1px 1px 8px var(--bg-body) !important;
+  }
+  &__perspectivaBSC .ant-col.ant-col-24.ant-col-lg-24::before {
+    content: "Las cuatro perspectivas del BSC";
+    text-align: center;
+  }
+
+  &__perspectivaBSC_TI .ant-col.ant-col-24.ant-col-lg-24::before {
+    content: "Las perspectivas del BSC cambian para TI";
+    text-align: center;
+  }
+
+  //   .ant-typography {
+  //     display: none !important;
+  //   }
+}
