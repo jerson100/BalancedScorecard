@@ -43,23 +43,29 @@ const Presentation = () => {
             { name: "Jose Caldas Aguilar", image: "img/authors/caldas.jpg" },
           ]}
           title="INTRODUCCIÓN"
-          backgroundImage="/img/ports/perspectiva.jpg"
+          backgroundImage="img/ports/perspectiva.jpg"
           Component={() => <Introduction isMovil={isMovil} />}
         />
         <PresentationItem
           images={[
-            { name: "Villajuan Burillo", image: "img/authors/villajuan.jpg" },
+            {
+              name: "Ricardo Villajuan Burillo",
+              image: "img/authors/villajuan.jpg",
+            },
           ]}
           title="MARCO TEÓRICO DEL BALANCED SCORECARD"
-          backgroundImage="/img/ports/port-2.jpg"
+          backgroundImage="img/ports/port-2.jpg"
           Component={() => <MarcoTeorico />}
         />
         <PresentationItem
           images={[
-            { name: "Villajuan Burillo", image: "img/authors/villajuan.jpg" },
+            {
+              name: "Ricardo Villajuan Burillo",
+              image: "img/authors/villajuan.jpg",
+            },
           ]}
           title="LIGANDO LA FORMULACIÓN DE LA ESTRATEGIA CON LA VISIÓN"
-          backgroundImage="/img/ports/port-3.jpg"
+          backgroundImage="img/ports/port-3.jpg"
           Component={() => <FormulacionEstrategia />}
         />
         <PresentationItem
@@ -72,7 +78,7 @@ const Presentation = () => {
             },
           ]}
           title="Perspectiva"
-          backgroundImage="/img/ports/port-2.jpg"
+          backgroundImage="img/ports/port-2.jpg"
           Component={() => <Perspectiva isMovil={isMovil} />}
         />
         <PresentationItem
@@ -80,13 +86,13 @@ const Presentation = () => {
             { name: "José Caldas Aguilar", image: "img/authors/caldas.jpg" },
           ]}
           title="Aplicación del BSC"
-          backgroundImage="/img/ports/perspectiva.jpg"
+          backgroundImage="img/ports/perspectiva.jpg"
           Component={() => <ElaboracionBsc isMovil={isMovil} />}
         />
         <PresentationItem
           images={[{ name: "Gustavo Alejo", image: "img/authors/gustavo.jpg" }]}
           title="Ventajas de contar con un BSC para TI"
-          backgroundImage="/img/ports/port-1.jpg"
+          backgroundImage="img/ports/port-1.jpg"
           Component={() => <VentajasContarBsc isMovil={isMovil} />}
         />
         <div style={{ backgroundColor: "tomato", height: "100%" }}>Frame 1</div>
