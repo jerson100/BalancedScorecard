@@ -1,8 +1,13 @@
 import React from "react";
 
-import { Row, Col, Typography, Divider, Table, Carousel } from "antd";
+import { Row, Col, Typography, Table, Carousel } from "antd";
 
-import { COLUMNS_ORG, DATA_ORG } from "../../services/elaboracionBsc";
+import {
+  COLUMNS_ORG,
+  DATA_ORG,
+  COLUMNS_TI,
+  DATA_TI,
+} from "../../services/elaboracionBsc";
 
 import "./elaboracionBsc.scss";
 import WrapperNav from "../../components/WrapperNav";
@@ -31,15 +36,15 @@ const ElaboracionBscOOrganizacion = () => {
               dataSource={DATA_ORG}
               title={() => (
                 <Title level={3}>
-                  Aplicación del SB Orientado a la Organización
+                  Aplicación del BSC Orientado a la Organización
                 </Title>
               )}
             />
             <Table
-              columns={COLUMNS_ORG}
-              dataSource={DATA_ORG}
+              columns={COLUMNS_TI}
+              dataSource={DATA_TI}
               title={() => (
-                <Title level={3}>Aplicación del SB Orientado a las TIC</Title>
+                <Title level={3}>Aplicación del BSC Orientado a las TIC</Title>
               )}
             />
           </Carousel>

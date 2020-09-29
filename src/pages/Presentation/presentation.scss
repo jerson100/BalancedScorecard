@@ -60,6 +60,10 @@
       // bottom: initial;
       left: 1rem;
       right: initial;
+      &--to-right {
+        right: 1rem;
+        left: initial;
+      }
     }
     &-description {
       font-size: 18px;
@@ -68,18 +72,3 @@
     }
   }
 }
-
-// @keyframes blur {
-//   0%,
-//   30% {
-//     filter: blur(0px);
-//   }
-//   30%,
-//   70% {
-//     filter: blur(10px);
-//   }
-//   70%,
-//   100% {
-//     filter: blur(0px);
-//   }
-// }

@@ -39,46 +39,55 @@ const Presentation = () => {
       <h1 style={{ display: "none" }}>Balanced Score Card</h1>
       <Carousel auto>
         <PresentationItem
-          name="Jose Caldas Aguilar"
-          image="img/authors/caldas.jpg"
+          images={[
+            { name: "Jose Caldas Aguilar", image: "img/authors/caldas.jpg" },
+          ]}
           title="INTRODUCCIÓN"
           backgroundImage="/img/ports/perspectiva.jpg"
           Component={() => <Introduction isMovil={isMovil} />}
         />
         <PresentationItem
-          name="Villajuan Burillo"
-          image="img/authors/villajuan.jpg"
+          images={[
+            { name: "Villajuan Burillo", image: "img/authors/villajuan.jpg" },
+          ]}
           title="MARCO TEÓRICO DEL BALANCED SCORECARD"
           backgroundImage="/img/ports/port-2.jpg"
           Component={() => <MarcoTeorico />}
         />
         <PresentationItem
-          name="Villajuan Burillo"
-          image="img/authors/villajuan.jpg"
+          images={[
+            { name: "Villajuan Burillo", image: "img/authors/villajuan.jpg" },
+          ]}
           title="LIGANDO LA FORMULACIÓN DE LA ESTRATEGIA CON LA VISIÓN"
           backgroundImage="/img/ports/port-3.jpg"
           Component={() => <FormulacionEstrategia />}
         />
         <PresentationItem
-          name="Gustavo Alejo"
-          image="img/authors/gustavo.jpg"
-          title="Ventajas de contar con un BSC para TI"
-          backgroundImage="/img/ports/port-1.jpg"
-          Component={() => <VentajasContarBsc isMovil={isMovil} />}
-        />
-        <PresentationItem
-          name="Jerson Ramírez Ortiz"
-          image="img/authors/jerson.jpg"
+          images={[
+            { name: "Jerson Ramírez Ortiz", image: "img/authors/jerson.jpg" },
+            {
+              name: "Dennys Guerrero",
+              image: "img/authors/dennys.jpg",
+              direction: "TO-RIGHT",
+            },
+          ]}
           title="Perspectiva"
           backgroundImage="/img/ports/port-2.jpg"
           Component={() => <Perspectiva isMovil={isMovil} />}
         />
         <PresentationItem
-          name="José Caldas Aguilar"
-          image="img/authors/caldas.jpg"
+          images={[
+            { name: "José Caldas Aguilar", image: "img/authors/caldas.jpg" },
+          ]}
           title="Aplicación del BSC"
           backgroundImage="/img/ports/perspectiva.jpg"
           Component={() => <ElaboracionBsc isMovil={isMovil} />}
+        />
+        <PresentationItem
+          images={[{ name: "Gustavo Alejo", image: "img/authors/gustavo.jpg" }]}
+          title="Ventajas de contar con un BSC para TI"
+          backgroundImage="/img/ports/port-1.jpg"
+          Component={() => <VentajasContarBsc isMovil={isMovil} />}
         />
         <div style={{ backgroundColor: "tomato", height: "100%" }}>Frame 1</div>
       </Carousel>
@@ -107,13 +116,7 @@ const PresentationWrapper = ({ children, title, backgroundImage }) => {
   );
 };
 
-const PresentationItem = ({
-  name,
-  image,
-  Component,
-  title,
-  backgroundImage,
-}) => {
+const PresentationItem = ({ images, Component, title, backgroundImage }) => {
   return (
     <div className="presentation__item">
       <PresentationWrapper title={title} backgroundImage={backgroundImage}>
@@ -121,7 +124,14 @@ const PresentationItem = ({
           <Component />
         </PresentationBody>
       </PresentationWrapper>
-      <PresentationAuthor name={name} image={image} />
+      {images.map((image, i) => (
+        <PresentationAuthor
+          key={i}
+          name={image.name}
+          image={image.image}
+          direction={image.direction}
+        />
+      ))}
     </div>
   );
 };

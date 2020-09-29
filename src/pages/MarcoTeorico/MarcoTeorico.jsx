@@ -1,29 +1,29 @@
 import React from "react";
 import { Row, Col, Typography } from "antd";
 
-import Modal from "../../components/Modal";
+// import Modal from "../../components/Modal";
 
 import "./marcoTeorico.scss";
-import { useState } from "react";
-import { useCallback } from "react";
+// import { useState } from "react";
+// import { useCallback } from "react";
 
 const { Title } = Typography;
 
 const MarcoTeorico = () => {
-  const [isModalVisible, setisModalVisible] = useState(false);
-  const [descriptionModal, setDescriptionModal] = useState("");
-  const [titleModal, settitleModal] = useState("");
+  //   const [isModalVisible, setisModalVisible] = useState(false);
+  //   const [descriptionModal, setDescriptionModal] = useState("");
+  //   const [titleModal, settitleModal] = useState("");
 
-  const openModal = useCallback((title, description) => {
-    setisModalVisible(true);
-    settitleModal(title);
-    setDescriptionModal(description);
-    // console.log(number);
-  }, []);
+  //   const openModal = useCallback((title, description) => {
+  //     setisModalVisible(true);
+  //     settitleModal(title);
+  //     setDescriptionModal(description);
+  //     // console.log(number);
+  //   }, []);
 
-  const closeModal = useCallback(() => {
-    setisModalVisible(false);
-  }, []);
+  //   const closeModal = useCallback(() => {
+  //     setisModalVisible(false);
+  //   }, []);
 
   return (
     <div className="marcoTeorico">
@@ -35,12 +35,12 @@ const MarcoTeorico = () => {
       >
         <Col
           lg={4}
-          onClick={() =>
-            openModal(
-              "Medidas Financieras",
-              "Para la mayoría de las organizaciones con fines de lucro, el dinero es una prioridad. Por lo tanto, para estas organizaciones la perspectiva más importante tiene que ver con los objetivos financieros. "
-            )
-          }
+          //   onClick={() =>
+          //     openModal(
+          //       "Medidas Financieras",
+          //       "Para la mayoría de las organizaciones con fines de lucro, el dinero es una prioridad. Por lo tanto, para estas organizaciones la perspectiva más importante tiene que ver con los objetivos financieros. "
+          //     )
+          //   }
         >
           <Title level={3} className="marcoTeorico__subtitle">
             Medidas Financieras
@@ -53,12 +53,12 @@ const MarcoTeorico = () => {
         </Col>
         <Col
           lg={4}
-          onClick={() =>
-            openModal(
-              "Perpspectiva del cliente",
-              "Esta perspectiva se centra en los objetivos estratégicos que están relacionados con los clientes y el mercado."
-            )
-          }
+          //   onClick={() =>
+          //     openModal(
+          //       "Perpspectiva del cliente",
+          //       "Esta perspectiva se centra en los objetivos estratégicos que están relacionados con los clientes y el mercado."
+          //     )
+          //   }
         >
           <Title level={3} className="marcoTeorico__subtitle">
             Perpspectiva del cliente
@@ -71,12 +71,12 @@ const MarcoTeorico = () => {
         </Col>
         <Col
           lg={4}
-          onClick={() =>
-            openModal(
-              "Procesos Internos",
-              "En este dimension debe establecer metas y objetivos operativos internos o, en otras palabras, definir qué procesos que requiere actualmente la organización y qué debe hacer para mejorar su desempeño."
-            )
-          }
+          //   onClick={() =>
+          //     openModal(
+          //       "Procesos Internos",
+          //       "En este dimension debe establecer metas y objetivos operativos internos o, en otras palabras, definir qué procesos que requiere actualmente la organización y qué debe hacer para mejorar su desempeño."
+          //     )
+          //   }
         >
           <Title level={3} className="marcoTeorico__subtitle">
             Procesos Internos
@@ -89,12 +89,12 @@ const MarcoTeorico = () => {
         </Col>
         <Col
           lg={4}
-          onClick={() =>
-            openModal(
-              "Crecimiento Organizacional",
-              "La perspectiva de formación o aprendizaje es una guía que sirve para identificar las metas que tiene la empresa en relación a la capacitación y entrenamiento de sus colaboradores."
-            )
-          }
+          //   onClick={() =>
+          //     openModal(
+          //       "Crecimiento Organizacional",
+          //       "La perspectiva de formación o aprendizaje es una guía que sirve para identificar las metas que tiene la empresa en relación a la capacitación y entrenamiento de sus colaboradores."
+          //     )
+          //   }
         >
           <Title level={3} className="marcoTeorico__subtitle">
             Crecimiento Organizacional
@@ -106,14 +106,14 @@ const MarcoTeorico = () => {
           />
         </Col>
       </Row>
-      <Modal
+      {/* <Modal
         visible={isModalVisible}
         handleCancel={closeModal}
         handleOk={closeModal}
         titleModal={titleModal}
       >
         <p>{descriptionModal}</p>
-      </Modal>
+      </Modal> */}
     </div>
   );
 };

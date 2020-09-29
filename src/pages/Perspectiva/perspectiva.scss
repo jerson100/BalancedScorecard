@@ -29,6 +29,16 @@
     font-size: 40px;
     text-shadow: 1px 1px 8px var(--bg-body) !important;
   }
+  &__perspectivaBSC .ant-col.ant-col-24.ant-col-lg-24::before {
+    content: "Las cuatro perspectivas del BSC";
+    text-align: center;
+  }
+
+  &__perspectivaBSC_TI .ant-col.ant-col-24.ant-col-lg-24::before {
+    content: "Las perspectivas del BSC cambian para TI";
+    text-align: center;
+  }
+
   //   .ant-typography {
   //     display: none !important;
   //   }

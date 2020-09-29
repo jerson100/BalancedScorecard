@@ -20,6 +20,58 @@ const COLUMNS_ORG = [
     width: "25%",
   },
 ];
+const COLUMNS_TI = [
+  {
+    title: "Perspectivas",
+    dataIndex: "perspectiva",
+    width: "33.33%",
+  },
+  {
+    title: "Misión",
+    dataIndex: "mision",
+    width: "33.33%",
+  },
+  {
+    title: "Estrategias",
+    dataIndex: "estrategia",
+    width: "33.33%",
+  },
+];
+
+const DATA_TI = [
+  {
+    key: 1,
+    perspectiva:
+      "ORIENTACION A LOS CLIENTES\n¿Como ven los ciudadanos y usuarios ven al departamento TI?",
+    mision: "Ser los suministradores de sistemas de información preferidas",
+    estrategia:
+      "Suministradores preferidos de aplicaciones\nSuministradores preferidos de operaciones o sugeridores de la mejor solución de cualquier fuente.\nAsociación con los usuarios Satisfacción de los Usuarios",
+  },
+  {
+    key: 2,
+    perspectiva:
+      "EXCELENCIA OPERACIONAL\n¿Como de efectivos y eficientes son los procesos TI?",
+    mision: "Ofrecer servicios y aplicaciones TI efectivas y eficientes",
+    estrategia:
+      "Desarrollo eficiente y efectivo\nOperaciones eficientes efectivas",
+  },
+  {
+    key: 3,
+    perspectiva:
+      "CONTRIBUCION A LA ORGANIZACION\n¿Como ve la dirección el departamento TI?",
+    mision: "Obtener de la organización una inversión razonable en TI",
+    estrategia:
+      "Control del gasto en TI Valor para las organizaciones de los proyectos TI.\nProveer nuevas capacidades de negocio ",
+  },
+  {
+    key: 4,
+    perspectiva:
+      "ORIENTACION FUTURA\n¿Como están posicionadas las TI para satisfacer las necesidades futuras?",
+    mision: "Desarrollar oportunidades para contestar a  desafíos futuros",
+    estrategia:
+      "Entrenamiento y educación de la dirección TI.\nExperiencia de la dirección TI.\nInvestigación en tecnologías emergentes.\nAntigüedad de las Aplicaciones",
+  },
+];
 
 const DATA_ORG = [
   {
@@ -62,4 +114,4 @@ const DATA_ORG = [
   },
 ];
 
-export { COLUMNS_ORG, DATA_ORG };
+export { COLUMNS_ORG, DATA_ORG, COLUMNS_TI, DATA_TI };
