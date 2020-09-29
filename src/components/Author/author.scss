@@ -1,0 +1,35 @@
+.author {
+  text-align: center;
+  background-color: var(--second-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: solid 2px var(--second-color);
+  box-shadow: 0 22px 12px -13px #131417c2;
+  &--small {
+    padding: 0.5rem;
+    width: 120px;
+    .author__imagen {
+      height: 4rem !important;
+      width: 4rem !important;
+    }
+    .author__name {
+      font-size: 14px !important;
+    }
+  }
+  &__name {
+    color: rgba(255, 255, 255, 0.623) !important;
+  }
+  &__description {
+    color: rgba(255, 255, 255, 0.514) !important;
+  }
+  &__imagen {
+    height: 10rem !important;
+    width: 10rem !important;
+    margin-bottom: 1.2rem;
+  }
+  svg {
+    fill: rgba(255, 255, 255, 0.698) !important;
+    width: 20px !important;
+    height: 20px !important;
+  }
+}

@@ -1,0 +1,18 @@
+.introduction {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #f0f2f5;
+  &__content {
+    height: 100%;
+    padding: 1rem;
+  }
+  &__title {
+    margin: 3rem 0 !important;
+    text-align: center;
+  }
+  img {
+    height: 20rem !important;
+    object-fit: contain;
+  }
+}

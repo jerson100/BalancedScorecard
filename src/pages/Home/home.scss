@@ -1,0 +1,37 @@
+.home {
+  background-color: var(--bg-body);
+  min-height: 100vh;
+  //   box-sizing: border-box !important;
+  //   position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  &__section {
+    background-color: initial;
+  }
+  &__content {
+    padding: 1rem;
+    // background-color: #fff;
+    border-radius: 5px;
+    // width: 100%;
+    // max-width: 800px;
+  }
+  &__title {
+    color: #fff !important;
+    text-align: center;
+    margin-bottom: 2.5rem !important;
+    margin-top: 2.5rem !important;
+  }
+  &__button {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    @media (min-width: 1200px) {
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
