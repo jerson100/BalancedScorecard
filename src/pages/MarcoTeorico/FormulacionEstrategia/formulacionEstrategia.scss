@@ -27,37 +27,24 @@
       height: 170px;
       width: 170px;
     }
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   right: 0;
-    //   left: 50%;
-    //   width: 100%;
-    //   height: 100%;
-    //   border-width: 10px;
-    //   border-style: solid;
-    //   border-color: red;
-    //   border-radius: 50%;
-    // }
   }
 
   > .ant-row > .ant-col:nth-child(1) .formulacionEstrategia__item {
     animation-delay: -0.8s;
-    background-color: rgb(137, 108, 52);
+    background-color: #f1a000;
   }
 
   > .ant-row > .ant-col:nth-child(2) .formulacionEstrategia__item {
     animation-delay: -0.6s;
-    background-color: rgb(129, 128, 107);
+    background-color: #282d31;
   }
   > .ant-row > .ant-col:nth-child(3) .formulacionEstrategia__item {
     animation-delay: -0.4s;
-    background-color: rgb(14, 117, 153);
+    background-color: #ff3c32;
   }
   > .ant-row > .ant-col:nth-child(4) .formulacionEstrategia__item {
     animation-delay: -0.25s;
-    background-color: rgb(12, 118, 72);
+    background-color: #007bdf;
   }
 
   &__h2 {

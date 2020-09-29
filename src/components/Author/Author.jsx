@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Typography, Row, Col, Space } from "antd";
+import { Avatar, Typography, Space } from "antd";
 import "./author.scss";
 import { createFromIconfontCN } from "@ant-design/icons";
 

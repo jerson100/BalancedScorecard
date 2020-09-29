@@ -1,0 +1,17 @@
+.keyword {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  transition: transform 0.5s ease;
+  transform: scale(1);
+  cursor: pointer;
+  user-select: none;
+  &:active {
+    transform: scale(1.2);
+  }
+  &__content {
+    margin-bottom: 0;
+  }
+}

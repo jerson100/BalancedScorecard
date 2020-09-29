@@ -1,17 +1,22 @@
 import React from "react";
 import { Layout, Typography, Row, Col, Button } from "antd";
+import { useWindowSize } from "react-use";
+import Confetti from "react-confetti";
 
 import "antd/dist/antd.css";
 import "./home.scss";
 import Author from "../../components/Author/Author";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 const { Content } = Layout;
 const { Title } = Typography;
 
 const Home = () => {
+  const { width, height } = useWindowSize();
   return (
     <div className="home">
+      <Confetti width={width} height={height} />
       <Layout className="home__section">
         <Content>
           <Row justify={"center"} align={"middle"}>
@@ -55,6 +60,9 @@ const Home = () => {
           </Row>
         </Content>
       </Layout>
+      <Button className="home__button" type="primary">
+        <Link to="/presentation">Iniciar Presentación</Link>
+      </Button>
     </div>
   );
 };

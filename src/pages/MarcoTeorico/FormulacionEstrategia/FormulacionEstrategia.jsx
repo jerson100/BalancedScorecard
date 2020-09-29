@@ -3,11 +3,11 @@ import { Row, Col, Typography } from "antd";
 
 import "./formulacionEstrategia.scss";
 
-const { Paragraph, Title } = Typography;
+const { Title } = Typography;
 
 const FormulacionEstrategia = () => {
   return (
-    <div class="formulacionEstrategia">
+    <div className="formulacionEstrategia">
       <Row
         justify="center"
         align="middle"

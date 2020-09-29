@@ -8,12 +8,24 @@
   &--small {
     padding: 0.5rem;
     width: 120px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .author__imagen {
       height: 4rem !important;
       width: 4rem !important;
     }
     .author__name {
       font-size: 14px !important;
+    }
+    @media (min-width: 1400px) {
+      width: 160px;
+      height: 180px;
+      .author__imagen {
+        height: 6rem !important;
+        width: 6rem !important;
+      }
     }
   }
   &__name {

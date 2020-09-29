@@ -48,6 +48,7 @@ const MarcoTeorico = () => {
           <img
             className="marcoTeorico__img"
             src="img/presentations/marcoTeorico/marcoT-1.jpg"
+            alt="medidas financieras"
           />
         </Col>
         <Col
@@ -65,6 +66,7 @@ const MarcoTeorico = () => {
           <img
             className="marcoTeorico__img"
             src="img/presentations/marcoTeorico/marcoT-2.jpg"
+            alt="perspectica cliente"
           />
         </Col>
         <Col
@@ -82,6 +84,7 @@ const MarcoTeorico = () => {
           <img
             className="marcoTeorico__img"
             src="img/presentations/marcoTeorico/marcoT-3.jpg"
+            alt="procesos internos"
           />
         </Col>
         <Col
@@ -99,6 +102,7 @@ const MarcoTeorico = () => {
           <img
             className="marcoTeorico__img"
             src="img/presentations/marcoTeorico/marcoT-4.jpg"
+            alt="Crecimiento Organizacional"
           />
         </Col>
       </Row>

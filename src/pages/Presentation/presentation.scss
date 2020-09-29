@@ -1,16 +1,35 @@
 .presentation {
   height: 100%;
   width: 100%;
-  //   padding: 1rem;
   background-color: #f0f2f5;
-  &__title {
-    margin: 0 !important;
+  &__title-container {
     height: var(--height-header);
-    display: flex;
+    position: relative;
+  }
+  &__title-bg {
+    // background-image: url("/img/ports/perspectiva.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 55%;
+    // filter: blur(10px);
+    filter: blur(10px) brightness(0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    animation: blur 10s infinite alternate ease;
+  }
+  &__title {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+    text-shadow: 1px 1px 8px var(--bg-body) !important;
     color: #fff !important;
-    justify-content: center;
-    background: var(--bg-body);
-    align-items: center;
     font-size: 18px !important;
     padding-left: 2rem !important;
     padding-right: 2rem !important;
@@ -49,3 +68,18 @@
     }
   }
 }
+
+// @keyframes blur {
+//   0%,
+//   30% {
+//     filter: blur(0px);
+//   }
+//   30%,
+//   70% {
+//     filter: blur(10px);
+//   }
+//   70%,
+//   100% {
+//     filter: blur(0px);
+//   }
+// }
