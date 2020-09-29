@@ -76,7 +76,7 @@ const PresentationWrapper = ({ children, title }) => {
         <Layout style={{ height: "100%" }}>
           <Content>
             {/* <h1 style={{ display: "none" }}>Introducción</h1> */}
-            <Title className="introduction__title">{title}</Title>
+            <Title className="presentation__title">{title}</Title>
             {children}
           </Content>
         </Layout>

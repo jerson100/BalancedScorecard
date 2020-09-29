@@ -1,75 +1,29 @@
 import React from "react";
 
-import {
-  Card,
-  Carousel,
-  Row,
-  Col,
-  Typography,
-  Layout,
-  Tabs,
-  List,
-  Divider,
-  Timeline,
-} from "antd";
-
-import {
-  AppleOutlined,
-  AndroidOutlined,
-  ExpandAltOutlined,
-} from "@ant-design/icons";
+import { Row, Col, Typography, Divider, Timeline } from "antd";
 
 import "./ventajasContarBsc.scss";
-import WrapperStatistic from "antd/lib/statistic/Statistic";
+import WrapperNav from "../../components/WrapperNav";
 
-const { Title, Text } = Typography;
-// import "./introduction.scss";
-
-const { TabPane } = Tabs;
+const { Title } = Typography;
 
 const VentajasContarBsc = ({ isMovil }) => {
   return (
     <div className="ventajasContarBsc">
-      <Row justify="center">
-        <Col lg={24}>
-          <Tabs defaultActiveKey="1" tabPosition={isMovil ? "top" : "left"}>
-            <TabPane
-              tab={
-                <span>
-                  <AppleOutlined />
-                  Examples
-                </span>
-              }
-              key="1"
-            >
-              {/* <IntroductionAuthor /> */}
-              <Examples />
-            </TabPane>
-            <TabPane
-              tab={
-                <span>
-                  <AndroidOutlined />
-                  Barreras para desarrollar el BSC de TI
-                </span>
-              }
-              key="2"
-            >
-              <Barreras />
-            </TabPane>
-            <TabPane
-              tab={
-                <span>
-                  <AndroidOutlined />
-                  Conclusiones
-                </span>
-              }
-              key="3"
-            >
-              <Conclusiones />
-            </TabPane>
-          </Tabs>
-        </Col>
-      </Row>
+      <WrapperNav
+        isMovil={isMovil}
+        tabs={[
+          { title: "Examples", Component: Examples },
+          {
+            title: "Conclusiones",
+            Component: Conclusiones,
+          },
+          {
+            title: "Barreras para desarrollar el BSC de TI",
+            Component: Barreras,
+          },
+        ]}
+      />
     </div>
   );
 };
@@ -89,9 +43,9 @@ const data = [
 
 const Examples = () => {
   return (
-    <section className="ventajasContarBsc__examples">
+    <section className="ventajasContarBsc__examples je-scroll">
       <Row gutter={[20, 20]} justify={"center"}>
-        <Col span={24} lg={10}>
+        <Col span={24} lg={24}>
           <Title
             level={2}
             style={{ marginBottom: "2rem", textAlign: "center" }}
@@ -121,9 +75,9 @@ const data1 = [
 
 const Barreras = () => {
   return (
-    <section className="ventajasContarBsc__examples">
+    <section className="ventajasContarBsc__examples je-scroll">
       <Row gutter={[20, 20]} justify={"center"}>
-        <Col span={24} lg={10}>
+        <Col span={24} lg={24}>
           <Title
             level={2}
             style={{ marginBottom: "2rem", textAlign: "center" }}
@@ -154,9 +108,9 @@ const data2 = [
 
 const Conclusiones = () => {
   return (
-    <section className="ventajasContarBsc__examples">
+    <section className="ventajasContarBsc__examples je-scroll">
       <Row gutter={[20, 20]} justify={"center"}>
-        <Col span={24} lg={10}>
+        <Col span={24} lg={24}>
           <Title
             level={2}
             style={{ marginBottom: "2rem", textAlign: "center" }}

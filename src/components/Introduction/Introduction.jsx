@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { Card, Carousel, Row, Col, Typography, Layout, Tabs } from "antd";
-
-import { AppleOutlined, AndroidOutlined } from "@ant-design/icons";
+import React from "react";
+import { Card, Carousel, Row, Col, Typography } from "antd";
 
 import "./introduction.scss";
+import WrapperNav from "../WrapperNav";
 
-const { TabPane } = Tabs;
 const { Meta } = Card;
 const { Title } = Typography;
-// const { Content } = Layout;
 
 const Introduction = ({ isMovil }) => {
   return (
@@ -19,55 +16,29 @@ const Introduction = ({ isMovil }) => {
 };
 
 const IntroductionTabs = ({ isMovil }) => {
-  //   console.log(isMovil);
   return (
-    <Row justify="center">
-      <Col lg={24}>
-        <Tabs defaultActiveKey="1" tabPosition={isMovil ? "top" : "left"}>
-          <TabPane
-            tab={
-              <span>
-                <AppleOutlined />
-                Introducción
-              </span>
-            }
-            key="1"
-          >
-            <IntroductionAuthor />
-          </TabPane>
-          <TabPane
-            tab={
-              <span>
-                <AndroidOutlined />
-                Importancia de las mipymes
-              </span>
-            }
-            key="2"
-          >
-            Tab 2
-          </TabPane>
-          <TabPane
-            tab={
-              <span>
-                <AndroidOutlined />
-                ¿Por qué necesitamos el balance scorecard?
-              </span>
-            }
-            key="3"
-          >
-            Tab 3
-          </TabPane>
-        </Tabs>
-      </Col>
-    </Row>
+    <WrapperNav
+      isMovil={isMovil}
+      tabs={[
+        { title: "Introducción", Component: IntroductionAuthor },
+        {
+          title: "¿POR QUÉ NECESITAMOS EL BALANCE SCORECARD?",
+          Component: IntroductionAuthor,
+        },
+      ]}
+    />
   );
 };
 
-const IntroductionAuthor = ({ name, description, image }) => {
+const IntroductionAuthor = () => {
   return (
-    <section>
-      <Row gutter={[20, 20]} justify={"center"}>
-        <Col span={24} lg={7}>
+    <section className="introduction__section je-scroll">
+      <Row
+        gutter={[20, 20]}
+        justify={"center"}
+        className="introduction__section-row"
+      >
+        <Col span={24} lg={24}>
           <Title>Introducciòn</Title>
           <p>
             Para que las micro, pequeñas y medianas empresas nacionales puedan
@@ -80,26 +51,11 @@ const IntroductionAuthor = ({ name, description, image }) => {
             que permita alinear la visión y las estrategias de la compañía con
             los resultados operativos.{" "}
           </p>
-          <p>
-            El reto de la competitividad es apremiante, y como es obvio estas
-            empresas requieren contar con mecanismos que les permitan
-            desarrollar estrategias y establecer indicadores de desempeño con el
-            fin de obtener productividad y eficiencia en sus procesos, mejorar
-            sus vínculos con los mercados, acceder a la innovación y la
-            tecnología, modernizar la gestión de sus recursos humanos y,
-            consecuentemente, lograr la rentabilidad deseada.
-          </p>
-          <p>
-            El Balanced Scorecard, difundido desde 1992 por los profesores
-            Robert Kaplan y David Norton, de la Universidad de Harvard, es una
-            metodología adecuada para enfrentar exitosamente el nuevo entorno
-            operativo de la actual era de la información y contribuir al
-            desarrollo de las micro, pequeñas y medianas empresas del país.
-          </p>
         </Col>
-        <Col span={24} lg={6}>
+        <Col span={24} lg={12} style={{ padding: "0 25px" }}>
           <Card
             //   style={{ width: 300 }}
+
             cover={
               <Slide
                 images={[
@@ -117,9 +73,8 @@ const IntroductionAuthor = ({ name, description, image }) => {
             />
           </Card>
         </Col>
-        <Col span={24} lg={6}>
+        <Col span={24} lg={12} style={{ padding: "0 25px" }}>
           <Card
-            //   style={{ width: 300 }}
             cover={
               <Slide
                 images={[
