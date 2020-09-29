@@ -1,4 +1,5 @@
 {
+  "homepage": "https://jerson100.github.io/BalancedScorecard",
   "name": "balancedccorecard",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +9,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "antd": "^4.6.6",
+    "gh-pages": "^3.1.0",
     "node-sass": "^4.14.1",
     "re-carousel": "^2.4.0",
     "react": "^16.13.1",
@@ -18,6 +20,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
