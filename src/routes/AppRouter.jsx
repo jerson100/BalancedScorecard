@@ -12,6 +12,14 @@ const AppRouter = () => {
         <Route path="/presentation" exact component={Presentation} />
         <Route component={Error} />
       </Switch>
+      {/* <div
+        style={{
+          backgroundImage:
+            "url(ttps://web.whatsapp.com/img/bg-chat-tile-dark_9f39e76b5a0e039e53afc5d9d4bdd780.png)",
+          backgroundColor: "rgb(30 31 38 / 57%)",
+          filter: "blur(4px)",
+        }}
+      ></div> */}
     </Router>
   );
 };

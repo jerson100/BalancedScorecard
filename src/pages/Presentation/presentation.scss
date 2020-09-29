@@ -1,6 +1,17 @@
 .presentation {
   height: 100%;
   width: 100%;
+  padding: 1rem;
+  background-color: #f0f2f5;
+  &__content {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  &__wrapper {
+    height: 100%;
+    // padding: 1rem;
+  }
   &__expositor {
     display: flex;
     justify-content: center;

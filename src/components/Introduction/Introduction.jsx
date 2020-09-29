@@ -8,44 +8,18 @@ import "./introduction.scss";
 const { TabPane } = Tabs;
 const { Meta } = Card;
 const { Title } = Typography;
-const { Content } = Layout;
+// const { Content } = Layout;
 
-const Introduction = () => {
-  const [isMovil, setIsMovil] = useState(true);
-
-  useEffect(() => {
-    const resize = () => {
-      console.log("resize");
-      if (window.matchMedia("(min-width: 1200px)").matches) {
-        setIsMovil(false);
-      } else {
-        setIsMovil(true);
-      }
-    };
-    window.addEventListener("resize", resize);
-    resize();
-    return () => {
-      window.removeEventListener(resize);
-    };
-  }, []);
-
+const Introduction = ({ isMovil }) => {
   return (
     <div className="introduction">
-      <div className="introduction__content">
-        <Layout style={{ height: "100%" }}>
-          <Content>
-            {/* <h1 style={{ display: "none" }}>Introducción</h1> */}
-            <Title className="introduction__title">INTRODUCCIÓN</Title>
-            <IntroductionTabs isMovil={isMovil} />
-          </Content>
-        </Layout>
-      </div>
+      <IntroductionTabs isMovil={isMovil} />
     </div>
   );
 };
 
 const IntroductionTabs = ({ isMovil }) => {
-  console.log(isMovil);
+  //   console.log(isMovil);
   return (
     <Row justify="center">
       <Col lg={24}>
@@ -93,7 +67,7 @@ const IntroductionAuthor = ({ name, description, image }) => {
   return (
     <section>
       <Row gutter={[20, 20]} justify={"center"}>
-        <Col span={24} lg={8}>
+        <Col span={24} lg={7}>
           <Title>Introducciòn</Title>
           <p>
             Para que las micro, pequeñas y medianas empresas nacionales puedan
@@ -121,18 +95,6 @@ const IntroductionAuthor = ({ name, description, image }) => {
             metodología adecuada para enfrentar exitosamente el nuevo entorno
             operativo de la actual era de la información y contribuir al
             desarrollo de las micro, pequeñas y medianas empresas del país.
-          </p>
-          <p>
-            Actualmente existen muy pocas experiencias acerca de la implantación
-            de esta metodología en micro, pequeñas y medianas empresas en el
-            ámbito nacional. En diversos sectores industriales se ha implantado
-            esta herramienta, pero solo como instrumento de medición de
-            desempeño para la toma de decisiones; este estudio pretende ir más
-            allá y utilizarla como una metodología de gestión estratégica, que
-            vincule el planeamiento estratégico con el control operativo. Así,
-            servirá para que empresas de diversos rubros creen un modelo
-            similar, manteniendo los lineamientos generales pero aplicando
-            cambios específicos que se adapten a sus respectivos rubros.
           </p>
         </Col>
         <Col span={24} lg={6}>

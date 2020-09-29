@@ -4,7 +4,7 @@ import { Layout, Typography, Row, Col, Button } from "antd";
 import "antd/dist/antd.css";
 import "./home.scss";
 import Author from "../../components/Author/Author";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -33,12 +33,21 @@ const Home = () => {
                   </Col>
                   <Col span={24} xl={8}>
                     <Author
-                      name="Villajuan"
+                      name="Ricardo Villajuan Burillo"
                       image="img/authors/villajuan.jpg"
                     />
                   </Col>
                   <Col span={24} xl={8}>
-                    <Author name="Gustavo" image="img/authors/gustavo.jpg" />
+                    <Author
+                      name="Gustavo Evangelista Alejo"
+                      image="img/authors/gustavo.jpg"
+                    />
+                  </Col>
+                  <Col span={24} xl={8}>
+                    <Author
+                      name="Dennys Guerrero Victor"
+                      image="img/authors/dennys.jpg"
+                    />
                   </Col>
                 </Row>
               </div>
@@ -46,9 +55,6 @@ const Home = () => {
           </Row>
         </Content>
       </Layout>
-      <Button className="home__button" type="primary">
-        <Link to="/presentation">Iniciar Presentación</Link>
-      </Button>
     </div>
   );
 };
