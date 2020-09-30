@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/BalancedScorecard/static/css/main.dcf0950e.chunk.css",
+    "main.css": "/BalancedScorecard/static/css/main.05d9fc12.chunk.css",
     "main.js": "/BalancedScorecard/static/js/main.0d9b19a5.chunk.js",
     "main.js.map": "/BalancedScorecard/static/js/main.0d9b19a5.chunk.js.map",
     "runtime-main.js": "/BalancedScorecard/static/js/runtime-main.a90e0bf1.js",
@@ -9,17 +9,17 @@
     "static/js/2.8cfef8c1.chunk.js": "/BalancedScorecard/static/js/2.8cfef8c1.chunk.js",
     "static/js/2.8cfef8c1.chunk.js.map": "/BalancedScorecard/static/js/2.8cfef8c1.chunk.js.map",
     "index.html": "/BalancedScorecard/index.html",
-    "precache-manifest.54e663346f40c8208fecee74ae0efdcd.js": "/BalancedScorecard/precache-manifest.54e663346f40c8208fecee74ae0efdcd.js",
+    "precache-manifest.31bf2396b0763f9913c4dde3911b8938.js": "/BalancedScorecard/precache-manifest.31bf2396b0763f9913c4dde3911b8938.js",
     "service-worker.js": "/BalancedScorecard/service-worker.js",
     "static/css/2.220ccb42.chunk.css.map": "/BalancedScorecard/static/css/2.220ccb42.chunk.css.map",
-    "static/css/main.dcf0950e.chunk.css.map": "/BalancedScorecard/static/css/main.dcf0950e.chunk.css.map",
+    "static/css/main.05d9fc12.chunk.css.map": "/BalancedScorecard/static/css/main.05d9fc12.chunk.css.map",
     "static/js/2.8cfef8c1.chunk.js.LICENSE.txt": "/BalancedScorecard/static/js/2.8cfef8c1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a90e0bf1.js",
     "static/css/2.220ccb42.chunk.css",
     "static/js/2.8cfef8c1.chunk.js",
-    "static/css/main.dcf0950e.chunk.css",
+    "static/css/main.05d9fc12.chunk.css",
     "static/js/main.0d9b19a5.chunk.js"
   ]
 }
