@@ -3,8 +3,10 @@
   height: inherit;
   //   border: solid 1px greenyellow;
   &__item {
-    height: 140px;
-    width: 140px;
+    // height: 140px;
+    // width: 140px;
+    height: 110px;
+    width: 110px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -48,7 +50,9 @@
   }
 
   &__h2 {
-    font-size: 14px !important;
+    // font-size: 14px !important;
+    font-size: 12px !important;
+    width: 90%;
     color: rgba(255, 255, 255, 0.603) !important;
     @media (min-width: 768px) {
       font-size: 15px !important;

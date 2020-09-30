@@ -66,7 +66,10 @@ const PerspectivaBSC = () => {
     <section className="perspectiva__definition perspectiva__perspectivaBSC je-scroll">
       <Row gutter={[20, 20]} justify={"center"}>
         <Col span={24} lg={24}>
-          <div className="perspectiva__definition-portada">
+          <div
+            className="perspectiva__definition-portada"
+            style={{ backgroundImage: "url('img/ports/perspectiva.jpg')" }}
+          >
             <Title
               level={2}
               style={{
@@ -114,7 +117,10 @@ const PerspectivaBSC_TI = () => {
     <section className="perspectiva__definition perspectiva__perspectivaBSC_TI je-scroll">
       <Row gutter={[20, 20]} justify={"center"}>
         <Col span={24} lg={24}>
-          <div className="perspectiva__definition-portada">
+          <div
+            className="perspectiva__definition-portada"
+            style={{ backgroundImage: "url('img/ports/perspectiva.jpg')" }}
+          >
             <Title
               level={2}
               style={{
