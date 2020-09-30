@@ -31,7 +31,10 @@ const DefinicionPerspectiva = () => {
     <section className="perspectiva__definition je-scroll">
       <Row gutter={[20, 20]} justify={"center"}>
         <Col span={24} lg={24}>
-          <div className="perspectiva__definition-portada" style={{backgroundImage="url('img/ports/perspectiva.jpg')"}}>
+          <div
+            className="perspectiva__definition-portada"
+            style={{ backgroundImage: "url('img/ports/perspectiva.jpg')" }}
+          >
             <Title
               level={2}
               style={{
