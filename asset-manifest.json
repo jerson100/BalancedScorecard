@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/BalancedScorecard/static/css/main.dcf0950e.chunk.css",
-    "main.js": "/BalancedScorecard/static/js/main.5e1c7e53.chunk.js",
-    "main.js.map": "/BalancedScorecard/static/js/main.5e1c7e53.chunk.js.map",
+    "main.js": "/BalancedScorecard/static/js/main.0d9b19a5.chunk.js",
+    "main.js.map": "/BalancedScorecard/static/js/main.0d9b19a5.chunk.js.map",
     "runtime-main.js": "/BalancedScorecard/static/js/runtime-main.a90e0bf1.js",
     "runtime-main.js.map": "/BalancedScorecard/static/js/runtime-main.a90e0bf1.js.map",
     "static/css/2.220ccb42.chunk.css": "/BalancedScorecard/static/css/2.220ccb42.chunk.css",
     "static/js/2.8cfef8c1.chunk.js": "/BalancedScorecard/static/js/2.8cfef8c1.chunk.js",
     "static/js/2.8cfef8c1.chunk.js.map": "/BalancedScorecard/static/js/2.8cfef8c1.chunk.js.map",
     "index.html": "/BalancedScorecard/index.html",
-    "precache-manifest.947eb392e25ab77003f3228e71892253.js": "/BalancedScorecard/precache-manifest.947eb392e25ab77003f3228e71892253.js",
+    "precache-manifest.54e663346f40c8208fecee74ae0efdcd.js": "/BalancedScorecard/precache-manifest.54e663346f40c8208fecee74ae0efdcd.js",
     "service-worker.js": "/BalancedScorecard/service-worker.js",
     "static/css/2.220ccb42.chunk.css.map": "/BalancedScorecard/static/css/2.220ccb42.chunk.css.map",
     "static/css/main.dcf0950e.chunk.css.map": "/BalancedScorecard/static/css/main.dcf0950e.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.220ccb42.chunk.css",
     "static/js/2.8cfef8c1.chunk.js",
     "static/css/main.dcf0950e.chunk.css",
-    "static/js/main.5e1c7e53.chunk.js"
+    "static/js/main.0d9b19a5.chunk.js"
   ]
 }
