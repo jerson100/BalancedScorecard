@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "69a3a5e7b56750cb731f8d0757601e4d",
+    "revision": "c463aa7a05a5eb9f48db2ed8cb4fcc79",
     "url": "/BalancedScorecard/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/BalancedScorecard/static/css/2.220ccb42.chunk.css"
   },
   {
-    "revision": "7a5659eeb023ed69bb3d",
-    "url": "/BalancedScorecard/static/css/main.9f2d30eb.chunk.css"
+    "revision": "c129a4d662f0a3801d79",
+    "url": "/BalancedScorecard/static/css/main.dcf0950e.chunk.css"
   },
   {
     "revision": "c2e792a1c9b6e29d077c",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/BalancedScorecard/static/js/2.8cfef8c1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7a5659eeb023ed69bb3d",
-    "url": "/BalancedScorecard/static/js/main.b093fd29.chunk.js"
+    "revision": "c129a4d662f0a3801d79",
+    "url": "/BalancedScorecard/static/js/main.5e1c7e53.chunk.js"
   },
   {
     "revision": "c792c66041ebd4bce0c6",
